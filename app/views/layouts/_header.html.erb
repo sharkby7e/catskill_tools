@@ -1,15 +1,14 @@
 <header>
-  <nav class="bg-zinc-700 h-24 text-white p-4 flex items-center justify-between">
-    <ul>
-      <li>
-        <%= link_to "Hudson Valley Tool Library", root_path, class: "text-xl font-semibold uppercase" %>
-      </li>
-    </ul>
+  <nav class="bg-zinc-700 h-24 sm:h-20 text-zinc-100 p-4 flex items-center justify-between">
+    <div class="flex gap-4">
+      <%= link_to "Hudson Valley Tool Library", root_path, class: "text-xl font-bold uppercase" %>
 
-    <ul>
-      <li>
-        <%= link_to "Log In", root_path %>
-      </li>
-    </ul>
+      <div class="text-xs hidden sm:block ml-10">
+        <p class="italic">From each according to ability</p>
+        <p class="italic">To each according to need</p>
+      </div>
+    </div>
+
+    <%= link_to "Log In", root_path, class: "text-zinc-300" %>
   </nav>
 </header>
