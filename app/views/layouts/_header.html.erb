@@ -1,4 +1,4 @@
-<header class="bg-zinc-700 h-20 text-zinc-100 p-4 flex items-center">
+<header class="bg-lime-950 h-20 text-zinc-100 p-4 flex items-center">
   <nav class="mx-auto max-w-6xl w-full flex items-center justify-between">
     <div class="flex gap-4">
       <%= link_to "Hudson Valley Tool Library", root_path, class: "text-xl font-bold uppercase" %>
@@ -9,6 +9,10 @@
       </div>
     </div>
 
-    <%= link_to "Log In", root_path, class: "text-zinc-300" %>
+    <% if current_user.present? %>
+      <%= link_to "Log Out", destroy_user_session_path, data: { turbo_method: :delete }, class: "text-zinc-300" %>
+    <% else %>
+      <%= link_to "Log In", new_user_session_path, class: "text-zinc-300" %>
+    <% end %>
   </nav>
 </header>
