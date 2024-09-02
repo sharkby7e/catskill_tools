@@ -11,3 +11,7 @@
 }
 
 */
+
+.btn {
+  @apply bg-gray-100 border border-zinc-500 py-1 px-2 rounded-md cursor-pointer  
+}
