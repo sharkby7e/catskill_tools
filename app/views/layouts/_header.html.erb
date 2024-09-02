@@ -1,9 +1,12 @@
-<header class="bg-lime-950 h-20 text-zinc-100 p-4 flex items-center">
+<header class="bg-lime-900 h-20 text-zinc-100 p-4 flex items-center">
   <nav class="mx-auto max-w-6xl w-full flex items-center justify-between">
-    <div class="flex gap-4">
-      <%= link_to "Hudson Valley Tool Library", root_path, class: "text-xl font-bold uppercase" %>
+    <div class="flex items-center gap-4">
+      <div class="flex flex-col text-xl font-bold italic text-amber-50">
+        <%= link_to "Hudson Valley", root_path %>
+        <%= link_to "Tool Library", root_path %>
+      </div>
 
-      <div class="text-xs hidden sm:block ml-10 italic">
+      <div class="text-xs hidden sm:block ml-10 text-zinc-300">
         <p>From each according to ability</p>
         <p>To each according to need</p>
       </div>
