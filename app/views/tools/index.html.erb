@@ -1,1 +1,22 @@
-<div class="text-3xl font-bold">Tools</div>
+<div class="flex flex-col mx-auto w-3/4 gap-4">
+  <div class="text-3xl font-bold">Tools</div>
+  <table class='w-full'>
+    <thead class='text-left'>
+      <tr>
+        <th class='p-2 border border-slate-700'>Tool Name</th>
+        <th class='p-2 border border-slate-700'>Tool Brand</th>
+        <th class='p-2 border border-slate-700'>Owner Contact</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @tools.each do |tool| %>
+        <tr>
+          <td class='border border-slate-700 p-2'><%= tool.name %></td>
+          <td class='border border-slate-700 p-2'><%= tool.brand_name %></td>
+          <td class='border border-slate-700 p-2 underline'><%= mail_to tool.user.email %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
