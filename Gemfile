@@ -56,6 +56,6 @@ end
 
 gem 'tailwindcss-rails', '~> 2.7'
 
-gem "dockerfile-rails", ">= 1.6", :group => :development
+gem 'dockerfile-rails', '>= 1.6', group: :development
 
-gem "pg", "~> 1.5"
+gem 'pg', '~> 1.5'
