@@ -24,7 +24,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.mailgun_settings = {
     api_key: ENV.fetch('MAILGUN_API_KEY', ''),
-    domain: ENV.fetch('DEFAULT_HOST', '')
+    domain: ENV.fetch('MAILGUN_DOMAIN', '')
     # api_host: 'api.eu.mailgun.net'  # Uncomment this line for EU region domains
     # timeout: 20 # Default depends on rest-client, whose default is 60s. Added in 1.2.3.
   }
