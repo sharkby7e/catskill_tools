@@ -7,6 +7,7 @@ gem 'bootsnap', require: false
 gem 'devise', github: 'heartcombo/devise', ref: 'f8d1ea90bc3'
 gem 'importmap-rails'
 gem 'jbuilder'
+gem 'mailgun-ruby', '~>1.2.14'
 gem 'omniauth'
 gem 'puma', '>= 5.0'
 gem 'rails', '~> 7.1.4'
