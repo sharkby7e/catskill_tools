@@ -7,6 +7,7 @@ gem 'bootsnap', require: false
 gem 'devise', github: 'heartcombo/devise', ref: 'f8d1ea90bc3'
 gem 'importmap-rails'
 gem 'jbuilder'
+gem 'mailgun-ruby', '~>1.2.14'
 gem 'omniauth'
 gem 'puma', '>= 5.0'
 gem 'rails', '~> 7.1.4'
@@ -56,3 +57,7 @@ group :test do
 end
 
 gem 'tailwindcss-rails', '~> 2.7'
+
+gem 'dockerfile-rails', '>= 1.6', group: :development
+
+gem 'pg', '~> 1.5'
