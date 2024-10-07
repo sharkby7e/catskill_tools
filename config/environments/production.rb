@@ -27,7 +27,7 @@ Rails.application.configure do
   # }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_options = { from: 'no-reply@hudsonvalleytools.com' }
+  config.action_mailer.default_options = { from: 'no-reply@hudsonvalleytools.com', host: ENV.fetch('DEFAULT_HOST', '') }
 
   # Ensures that a master key has been made available in ENV["RAILS_MASTER_KEY"], config/master.key, or an environment
   # key such as config/credentials/production.key. This key is used to decrypt credentials (and other encrypted files).

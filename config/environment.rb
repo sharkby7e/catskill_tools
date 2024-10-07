@@ -5,4 +5,3 @@ require_relative 'application'
 
 # Initialize the Rails application.
 Rails.application.initialize!
-DEFAULT_HOST = ENV.fetch('DEFAULT_HOST', 'fakehost')
