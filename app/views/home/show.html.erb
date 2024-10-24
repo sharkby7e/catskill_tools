@@ -1,5 +1,13 @@
-<div>
-  <p>
-    Welcome to the Hudson Valley Tool Library
-  </p>
+<div class='w-full flex flex-col space-y-8'>
+  <div>
+    <p>
+      Welcome to the Hudson Valley Tool Library
+    </p>
+    <p>
+      These are the current tools that we have available
+    </p>
+  </div>
+  <div>
+    <%= turbo_frame_tag :tools_index, src: tools_path %>
+  </div>
 </div>
