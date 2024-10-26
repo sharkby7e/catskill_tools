@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '3.2.2'
+ruby '3.3.5'
 gem 'bootsnap', require: false
 gem 'devise', github: 'heartcombo/devise', ref: 'f8d1ea90bc3'
 gem 'importmap-rails'
