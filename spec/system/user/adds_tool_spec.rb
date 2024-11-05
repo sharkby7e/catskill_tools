@@ -1,14 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe '', type: :system do
-  before do
-    driven_by(:selenium_chrome_headless)
-  end
-
+RSpec.describe 'User adds tools', type: :system do
   it 'allows a user to add a new tool' do
+    user = create(:user, :confirmed)
+
+    login_as(user)
     visit new_tool_path
 
-    fill_in 'Name', with: 'Impact Driver'
+    fill_in :name, with: 'Impact Driver'
     fill_in :tool_brand_name, with: 'Makita'
 
     click_on 'Create Tool'

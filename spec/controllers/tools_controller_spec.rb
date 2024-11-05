@@ -22,8 +22,10 @@ RSpec.describe ToolsController, type: :request do
   end
 
   describe '#new' do
-    it 'works' do
-      create(:user)
+    it 'works if you are a user' do
+      user = create(:user, :confirmed)
+
+      sign_in user
 
       get new_tool_path
 
