@@ -3,9 +3,10 @@ require 'rails_helper'
 RSpec.describe 'User adds tools', type: :system do
   it 'allows a user to add a new tool' do
     user = create(:user, :confirmed)
-
     login_as(user)
-    visit new_tool_path
+    visit root_path
+
+    click_on '+ Add Tool'
 
     fill_in :name, with: 'Impact Driver'
     fill_in :tool_brand_name, with: 'Makita'
