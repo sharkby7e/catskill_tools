@@ -1,11 +1,16 @@
 <div class='w-full flex flex-col space-y-8'>
-  <div>
-    <p>
-      Welcome to the Hudson Valley Tool Library
-    </p>
-    <p>
-      These are the current tools that we have available
-    </p>
+  <div class="flex justify-between">
+    <div>
+      <p>
+        Welcome to the Hudson Valley Tool Library
+      </p>
+      <p>
+        These are the current tools that we have available
+      </p>
+    </div>
+    <div>
+      <%= link_to '+ Add Tool', new_tool_path %>
+    </div>
   </div>
   <div>
     <%= turbo_frame_tag :tools_index, src: tools_path %>

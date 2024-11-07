@@ -54,6 +54,7 @@ RSpec.describe ToolsController, type: :request do
       sign_in(create(:user, :confirmed))
 
       expect { subject }.to change { Tool.count }.by 1
+      expect(response).to be_redirect
     end
   end
 end

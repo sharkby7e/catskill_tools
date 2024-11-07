@@ -6,7 +6,7 @@ class ToolsController < ApplicationController
   end
 
   def new
-    return redirect_to root_path unless current_user.present?
+    return redirect_to new_user_session_path, status: :see_other unless current_user.present?
 
     @tool = Tool.new
   end
@@ -18,7 +18,7 @@ class ToolsController < ApplicationController
     @tool.user = current_user
 
     if @tool.save
-      redirect_to @tool
+      redirect_to tools_index
     else
       render :new, status: :unprocessable_entity
     end
