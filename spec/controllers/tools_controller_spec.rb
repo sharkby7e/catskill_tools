@@ -38,4 +38,22 @@ RSpec.describe ToolsController, type: :request do
       expect(response).to be_redirect
     end
   end
+
+  describe '#create' do
+    subject { post tools_path, params: params }
+    let(:params) do
+      {
+        tool: {
+          name: 'Screwdrive',
+          brand_name: 'Makita'
+        }
+      }
+    end
+
+    it 'creates a new tool if you are logged in' do
+      sign_in(create(:user, :confirmed))
+
+      expect { subject }.to change { Tool.count }.by 1
+    end
+  end
 end
