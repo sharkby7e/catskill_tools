@@ -3,17 +3,14 @@
     <div class="flex items-center gap-4">
       <%= link_to root_path do %>
         <div class="flex flex-col text-xl font-bold italic text-amber-50">
-          <p>Hudson Valley</p>
-          <p>Tool Share</p>
+          <p>Catskill Community Tools</p>
         </div>
       <% end %>
-
       <div class="text-xs hidden sm:block ml-10 text-zinc-300">
         <p>From each according to ability</p>
         <p>To each according to need</p>
       </div>
     </div>
-
     <% if current_user.present? %>
       <%= link_to "Log Out", destroy_user_session_path, data: { turbo_method: :delete }, class: "text-zinc-300" %>
     <% else %>

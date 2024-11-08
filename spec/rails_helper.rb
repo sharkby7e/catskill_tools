@@ -66,6 +66,10 @@ RSpec.configure do |config|
   # have_content etc...
   config.include Capybara::RSpecMatchers, type: :request
 
+  # devise test helpers
+  config.include Devise::Test::IntegrationHelpers, type: :request
+  config.include Warden::Test::Helpers
+
   # Filter lines from Rails gems in backtraces.
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
