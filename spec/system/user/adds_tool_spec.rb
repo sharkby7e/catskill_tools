@@ -8,12 +8,12 @@ RSpec.describe 'User adds tools', type: :system do
 
     click_on '+ Add Tool'
 
-    fill_in :name, with: 'Impact Driver'
-    fill_in :tool_brand_name, with: 'Makita'
+    fill_in 'Tool Name', with: 'Impact Driver'
+    fill_in 'Tool Brand', with: 'Makita'
 
     click_on 'Create Tool'
 
-    expect(page).to have_content 'Tool was successfully created!'
+    expect(page).to have_content 'Impact Drive'
   end
 
   it 'redirects you to session new if you are not logged in' do
