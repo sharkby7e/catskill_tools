@@ -18,7 +18,7 @@ class ToolsController < ApplicationController
     @tool.user = current_user
 
     if @tool.save
-      redirect_to tools_path
+      redirect_to tools_path, notice: 'Tool added successfully!'
     else
       render :new, status: :unprocessable_entity
     end

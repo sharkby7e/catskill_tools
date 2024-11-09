@@ -1,0 +1,10 @@
+<% flash.each do |type, msg| %>
+  <div class='w-full flex justify-center'>
+    <% bg_class = type == 'notice' ? 'bg-emerald-600' : 'bg-pink-200' %>
+    <div class='z-10 flex rounded-md items_center p-4 -my-12 mx-auto w-1/4 <%= bg_class %>' data-turbo-temporary='true'>
+      <p class='w-full text-center font-semibold text-white'>
+        <%= msg %>
+      </p>
+    </div>
+  </div>
+<% end %>
