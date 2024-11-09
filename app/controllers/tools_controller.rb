@@ -6,7 +6,10 @@ class ToolsController < ApplicationController
   end
 
   def new
-    return redirect_to new_user_session_path, status: :see_other unless current_user.present?
+    unless current_user.present?
+      flash[:error] = 'You must be logged in to add a tool!'
+      redirect_to new_user_session_path status: :see_other
+    end
 
     @tool = Tool.new
   end
@@ -18,7 +21,7 @@ class ToolsController < ApplicationController
     @tool.user = current_user
 
     if @tool.save
-      redirect_to tools_path
+      redirect_to tools_path, notice: 'Tool added successfully!'
     else
       render :new, status: :unprocessable_entity
     end

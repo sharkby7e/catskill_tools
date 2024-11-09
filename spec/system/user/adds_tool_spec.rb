@@ -13,6 +13,7 @@ RSpec.describe 'User adds tools', type: :system do
 
     click_on 'Create Tool'
 
+    expect(page).to have_content 'Tool added successfully!'
     expect(page).to have_content 'Impact Drive'
   end
 
