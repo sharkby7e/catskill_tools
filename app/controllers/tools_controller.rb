@@ -7,7 +7,7 @@ class ToolsController < ApplicationController
 
   def new
     unless current_user.present?
-      flash[:error] = 'You must be logged in to add a tool!'
+      flash[:error] = 'Log in or Sign up to add a tool!'
       redirect_to new_user_session_path status: :see_other
     end
 
