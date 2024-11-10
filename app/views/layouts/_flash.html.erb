@@ -1,12 +1,12 @@
 <div 
-      data-controller="notification"
-      data-notification-delay-value="1500"
-      class="transition transform duration-1000 hidden"
-      data-transition-enter-from="opacity-0 -translate-y-6"
-      data-transition-enter-to="opacity-100 translate-y-0"
-      data-transition-leave-from="opacity-100 translate-y-0"
-      data-transition-leave-to="opacity-0 -translate-y-6"
-      >
+  data-controller="notification"
+  data-notification-delay-value="1500"
+  class="transition transform duration-1000 hidden"
+  data-transition-enter-from="opacity-0 -translate-y-6"
+  data-transition-enter-to="opacity-100 translate-y-0"
+  data-transition-leave-from="opacity-100 translate-y-0"
+  data-transition-leave-to="opacity-0 -translate-y-6"
+  >
   <% flash.each do |type, msg| %>
     <div class='w-full h-0 flex justify-center'>
       <% bg_class = type == 'notice' ? 'bg-emerald-300' : 'bg-pink-300' %>
