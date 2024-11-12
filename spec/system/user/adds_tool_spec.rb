@@ -18,5 +18,10 @@ RSpec.describe 'User adds tools', type: :system do
   end
 
   it 'redirects you to session new if you are not logged in' do
+    visit root_path
+
+    click_on '+ Add Tool'
+
+    expect(page).to have_content 'Log in or Sign up to add a tool!'
   end
 end

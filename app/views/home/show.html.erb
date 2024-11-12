@@ -8,9 +8,7 @@
         Here are the current tools that we have available
       </p>
     </div>
-    <div>
-      <%= link_to '+ Add Tool', new_tool_path %>
-    </div>
+    <%= render 'tools/add_tool_button' %>
   </div>
   <div>
     <%= turbo_frame_tag :tools_index, src: tools_path %>

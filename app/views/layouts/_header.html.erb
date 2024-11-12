@@ -12,7 +12,7 @@
       </div>
     </div>
     <% if current_user.present? %>
-      <%= link_to "Log Out", destroy_user_session_path, data: { turbo_method: :delete }, class: "text-zinc-300" %>
+      <%= button_to "Log Out", destroy_user_session_path, data:{ turbo: :false }, method: :delete, class: "text-zinc-300" %>
     <% else %>
       <%= link_to "Log In", new_user_session_path, class: "text-zinc-300" %>
     <% end %>
