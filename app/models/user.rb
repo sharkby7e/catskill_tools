@@ -7,7 +7,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable,
          :trackable, :omniauthable
 
-  has_many :tools, dependent: :destroy
+  has_many :tools
 end
 
 # == Schema Information
