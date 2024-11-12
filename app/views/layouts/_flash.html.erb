@@ -10,9 +10,9 @@
   <% flash.each do |type, msg| %>
     <div class='w-full h-0 flex justify-center'>
       <% bg_class = type == 'notice' ? 'bg-emerald-300' : 'bg-pink-300' %>
-      <div class='z-10 relative justify-between h-18 rounded-md items_center p-4 -my-8 mx-auto w-2/3 md:w-1/3 <%= bg_class %>' data-turbo-temporary='true'>
-        <button class='absolute top-1 right-4' data-action="notification#hide">&times;</button>
-        <p class='text-sm lg:text-base pt-1 w-full text-center font-semibold'>
+      <div class='z-10 relative justify-between h-fit rounded-md items_center p-4 -my-8 mx-auto w-2/3 xl:w-1/3 <%= bg_class %>' data-turbo-temporary='true'>
+        <button class='absolute top-1 right-3' data-action="notification#hide">&times;</button>
+        <p class='text-sm xl:text-base py-2 w-full text-center font-semibold'>
           <%= msg %>
         </p>
       </div>
