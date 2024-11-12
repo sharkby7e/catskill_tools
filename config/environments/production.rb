@@ -28,7 +28,7 @@ Rails.application.configure do
     # api_host: 'api.eu.mailgun.net'  # Uncomment this line for EU region domains
     # timeout: 20 # Default depends on rest-client, whose default is 60s. Added in 1.2.3.
   }
-  config.action_mailer.default_options = { from: 'no-reply@hudsonvalleytools.com' }
+  config.action_mailer.default_options = { from: 'noreply@catskilltools.com' }
   config.action_mailer.default_url_options = { host: ENV.fetch('DEFAULT_HOST', '') }
 
   # Ensures that a master key has been made available in ENV["RAILS_MASTER_KEY"], config/master.key, or an environment
