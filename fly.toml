@@ -4,7 +4,7 @@
 #
 
 app = 'hvtl'
-primary_region = 'ewr'
+primary_region = 'ord'
 console_command = '/rails/bin/rails console'
 
 [build]
