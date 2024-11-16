@@ -17,7 +17,6 @@ gem 'sprockets-rails'
 gem 'sqlite3', '>= 1.4'
 gem 'stimulus-rails'
 gem 'turbo-rails'
-gem 'tzinfo-data', platforms: %i[windows jruby]
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
