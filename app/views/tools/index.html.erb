@@ -5,6 +5,7 @@
   </div>
   <%= turbo_frame_tag :tools_index do %>
     <% if @tools.any? %>
+      <div class='text-sm lg:text-base overflow-x-auto'>
       <table class='w-full'>
         <thead class='text-left'>
           <tr>
@@ -23,6 +24,7 @@
           <% end %>
         </tbody>
       </table>
+      </div>
     <% else %>
       No tools yet!
     <% end %>
